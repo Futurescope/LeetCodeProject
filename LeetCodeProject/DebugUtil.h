@@ -4,6 +4,11 @@
 namespace DebugUtil
 {
 	void OutputString(const char* s);
+	template<typename T>
+	void OutputValue(T s)
+	{
+		OutputString(std::to_string(s).c_str());
+	}
 
 	template<typename T>
 	std::string VectorToStr(const std::vector<T>& vec)
