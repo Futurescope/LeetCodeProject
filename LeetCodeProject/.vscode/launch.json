@@ -2,13 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) 启动",
+      "name": "Debug",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/Debug/main.o",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${fileDirname}",
+      "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
@@ -23,26 +23,8 @@
           "text": "-gdb-set disassembly-flavor intel",
           "ignoreFailures": true
         }
-      ]
-    },
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/home/bice881/CPP/LeetCodeProject/LeetCodeProject",
-      "program": "/home/bice881/CPP/LeetCodeProject/LeetCodeProject/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      ],
+      "preLaunchTask": "build"
     }
   ]
 }
