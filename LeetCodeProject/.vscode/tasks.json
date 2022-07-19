@@ -7,8 +7,9 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "${workspaceFolder}//*.cpp",
-                // "${workspaceFolder}/Solutions/*.cpp",
+                "${workspaceFolder}/*.cpp",
+                "-I${workspaceFolder}",
+                "-I${workspaceFolder}/Solutions",
                 "-o",
                 "${workspaceFolder}/build/Debug/main.o",
                 "-g",

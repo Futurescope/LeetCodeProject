@@ -3,8 +3,7 @@
     {
       "name": "linux-gcc-x64",
       "includePath": [
-        "${workspaceRoot}/Solutions",
-        "${workspaceRoot}/"
+        "${workspaceFolder}/**"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",
@@ -12,7 +11,12 @@
       "intelliSenseMode": "linux-gcc-x64",
       "compilerArgs": [
         ""
-      ]
+      ],
+      "browse": {
+        "path": ["${workspaceFolder}/"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
     }
   ],
   "version": 4
