@@ -1,11 +1,11 @@
 #include "pch.h"
-#include "LeetCode54.h"
+#include "LeetCode1706.h"
 
 //using namespace std;
 
 int main()
 {
-	_54::Solution s;
+	_1706::Solution s;
 	s.exec();
 	return 0;
 }
