@@ -35,5 +35,29 @@
     <ClInclude Include="Solutions\LeetCode438.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\LeetCode3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode25.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode54.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode202.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode205.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode724.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode43.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solutions\LeetCode14.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
