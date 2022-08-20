@@ -72,6 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>D:\Codes\C++\VSsln\LeetCodeProject\LeetCodeProject;D:\Codes\C++\VSsln\LeetCodeProject\LeetCodeProject\Solutions;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>.\Solutions;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -133,6 +136,7 @@
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Solutions\LeetCode14.h" />
+    <ClInclude Include="Solutions\LeetCode1706.h" />
     <ClInclude Include="Solutions\LeetCode202.h" />
     <ClInclude Include="Solutions\LeetCode205.h" />
     <ClInclude Include="Solutions\LeetCode25.h" />
