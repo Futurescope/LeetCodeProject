@@ -3,10 +3,9 @@
 
 using namespace std;
 
-namespace _3
+namespace _3_old
 {
 	class Solution : public SolutionBase
-
 	{
 	public:
 		Solution() = default;
@@ -16,7 +15,7 @@ namespace _3
 		int lengthOfLongestSubstring(string s) {
 			int nMaxLen = 0;
 			// special case
-			if (s.size() <= 1) return s.size();
+			if (s.size() <= 1) return (int)s.size();
 			// keep the order of the child_string
 			std::list<char> lChildList;
 			// hash vector
@@ -57,7 +56,7 @@ namespace _3
 				{
 					lChildList.push_back(it);
 					vecCheck[it - ' '] = 1;
-					nMaxLen = lChildList.size() > nMaxLen ? lChildList.size() : nMaxLen;
+					nMaxLen = lChildList.size() > nMaxLen ? (int)lChildList.size() : nMaxLen;
 				}
 			}
 			return nMaxLen;
@@ -70,4 +69,60 @@ namespace _3
 			return true;
 		}
 	};
+}
+
+namespace _3
+{
+    class Solution : public SolutionBase
+    {
+    public:
+        Solution() = default;
+        ~Solution() = default;
+        // 由英文字母、数字、符号和空格组成
+        std::vector<bool> wordBook = std::vector<bool>(128, false);
+
+        bool InBook(char c)
+        {
+            return wordBook[c];
+        }
+
+        void PopBook(char c)
+        {
+            wordBook[c] = false;
+        }
+        void PushBook(char c)
+        {
+            wordBook[c] = true;
+        }
+
+
+        int lengthOfLongestSubstring(const string& s)
+        {
+            size_t front = 0;
+            size_t back = 0;
+            size_t maxLen = 0;
+            for (; back < s.length(); ++back)
+            {
+                if (InBook(s[back]))
+                {
+                    while (front < back)
+                    {
+                        PopBook(s[front]);
+                        ++front;
+                        if (s[front - 1] == s[back])
+                            break;
+                    }
+                }
+                PushBook(s[back]);
+                maxLen = std::max(back - front + 1, maxLen);
+            }
+            return static_cast<int>(maxLen);
+        }
+
+        bool exec() override
+        {
+            DebugUtil::OutputValue(lengthOfLongestSubstring(""));
+            return true;
+        }
+    };
 }

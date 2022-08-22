@@ -28,7 +28,7 @@ namespace _1706
                 return -1;
             if ((grid[row][currentCell] == 1) && (grid[row][currentCell + 1] == -1))
                 return -1;
-            return currentCell + grid[row][currentCell];
+            return (int)currentCell + grid[row][currentCell];
         }
 
         vector<int> findBall(vector<vector<int>>& in)
@@ -40,7 +40,7 @@ namespace _1706
             while (ball <= colSize)
             {
                 size_t row = 0;
-                res[ball] = ball;
+                res[ball] = (int)ball;
                 while (row < grid.size())
                 {
                     res[ball] = nextCell(row++, res[ball]);
