@@ -21,7 +21,7 @@ public:
 	~Partition() = default;
 
 public:
-	//½«Node½Úµã²åÈëµ½FrontÖ®ºó
+	//å°†NodeèŠ‚ç‚¹æ’å…¥åˆ°Frontä¹‹åŽ
 	void insertNode(ListNode* pFront, ListNode* pNode)
 	{
 		pNode->next = pFront->next;
@@ -30,14 +30,14 @@ public:
 
 	ListNode* partition(ListNode* pHead, int x)
 	{
-		// Ê¹ÓÃÍ·²å·¨¼´¿É½â¾ö´ËÎÊÌâ
+		// ä½¿ç”¨å¤´æ’æ³•å³å¯è§£å†³æ­¤é—®é¢˜
 		if (pHead == nullptr)
 			return nullptr;
 		ListNode* pSentry = new ListNode(INT_MAX);
 		ListNode* pInsPos = pSentry;
 		pSentry->next = pHead;
 		ListNode* pFront = pSentry;
-		//ÏÈÕÒµÚÒ»¸ö´óÓÚxµÄ½Úµã
+		//å…ˆæ‰¾ç¬¬ä¸€ä¸ªå¤§äºŽxçš„èŠ‚ç‚¹
 		while (pFront->next != nullptr)
 		{
 			ListNode* pNode = pFront->next;
@@ -54,16 +54,16 @@ public:
 			break;
 		}
 		pFront = pInsPos;
-		//²Ù×÷µÄÊÇpPointµÄÏÂÒ»¸ö½Úµã
+		//æ“ä½œçš„æ˜¯pPointçš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 		while (pFront->next != nullptr)
 		{
 			ListNode* pNode = pFront->next;
 			//ListNode* pNode = nullptr;
 			if (pNode->val < x)
 			{
-				//È¡³öÕâ¸ö½Úµã
+				//å–å‡ºè¿™ä¸ªèŠ‚ç‚¹
 				pFront->next = pNode->next;
-				//²åÈëµ½²åÈë½ÚµãÖ®ºó
+				//æ’å…¥åˆ°æ’å…¥èŠ‚ç‚¹ä¹‹åŽ
 				insertNode(pInsPos, pNode);
 				pInsPos = pNode;
 			}
@@ -98,7 +98,7 @@ public:
 		ListNode* pEnd = pRes;
 		while (true)
 		{
-			//½áÊøÌõ¼þ
+			//ç»“æŸæ¡ä»¶
 			if (pHead1 == nullptr)
 			{
 				pEnd->next = pHead2;

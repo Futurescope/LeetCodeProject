@@ -12,7 +12,7 @@ namespace _912
         ~Solution() = default;
 
     public:
-        // ¾­µä¿ìÅÅ
+        // ç»å…¸å¿«æ’
         void QuickSort(vector<int>& nums, size_t left_in, size_t right_in)
         {
             if (left_in >= right_in)
@@ -22,13 +22,13 @@ namespace _912
             int val = nums[left];
             while (left < right)
             {
-                // ÕÒÒ»¸ö´óÖµ
+                // æ‰¾ä¸€ä¸ªå¤§å€¼
                 while (left < right && nums[right] > val)
                     --right;
                 if (left < right)
-                    // ²»++ÈİÒ×ËÀÑ­»·
+                    // ä¸++å®¹æ˜“æ­»å¾ªç¯
                     nums[left++] = nums[right];
-                // ÕÒÒ»¸öĞ¡Öµ
+                // æ‰¾ä¸€ä¸ªå°å€¼
                 while (left < right && nums[left] < val)
                     ++left;
                 if (left < right)
@@ -39,25 +39,25 @@ namespace _912
             QuickSort(nums, left + 1, right_in);
         }
 
-        // swap¿ìÅÅ
-        // swap¿ìÅÅ»¹ÓĞÁíÍâÒ»ÖÖ´ÓÇ°Íùºó½»»»µÄ·½·¨£¬»ù±¾²î²»¶à
+        // swapå¿«æ’
+        // swapå¿«æ’è¿˜æœ‰å¦å¤–ä¸€ç§ä»å‰å¾€åäº¤æ¢çš„æ–¹æ³•ï¼ŒåŸºæœ¬å·®ä¸å¤š
         void QuickSortSwap(vector<int>& nums, int left_in, int right_in)
         {
             if (left_in >= right_in)
                 return;
             int left = left_in;
             int right = right_in;
-            // Ëæ»úbase
+            // éšæœºbase
             int rand_index = (rand() % (right_in - left_in)) + left_in;
             swap(nums[left_in], nums[rand_index]);
             int base = nums[left];
             while (left < right)
             {
-                // ÕÒÒ»¸ö´óÖµ£¬ÒòÎªbaseÊ¹ÓÃµÄÊÇµÚÒ»¸öÖµ£¬ÔÚºóÃæswap baseµÄÊ±ºòÖ»ÄÜÓëÖĞ¼äµÄ½ÏĞ¡Õß½»»»
-                // ÕÒ´óÖµµÄÊ±ºò£¬×îÖÕleft == rightÊ±Ë÷Òı»áÍ£ÁôÔÚ½ÏĞ¡µÄÄÇ¸öÊı×ÖÉÏ
+                // æ‰¾ä¸€ä¸ªå¤§å€¼ï¼Œå› ä¸ºbaseä½¿ç”¨çš„æ˜¯ç¬¬ä¸€ä¸ªå€¼ï¼Œåœ¨åé¢swap baseçš„æ—¶å€™åªèƒ½ä¸ä¸­é—´çš„è¾ƒå°è€…äº¤æ¢
+                // æ‰¾å¤§å€¼çš„æ—¶å€™ï¼Œæœ€ç»ˆleft == rightæ—¶ç´¢å¼•ä¼šåœç•™åœ¨è¾ƒå°çš„é‚£ä¸ªæ•°å­—ä¸Š
                 while (left < right && nums[right] > base)
                     --right;
-                // ÕÒÒ»¸öĞ¡Öµ
+                // æ‰¾ä¸€ä¸ªå°å€¼
                 while (left < right && nums[left] <= base)
                     ++left;
                 if (left < right)
@@ -70,7 +70,7 @@ namespace _912
 
         vector<int> sortArray(vector<int>& nums)
         {
-            QuickSortSwap(nums, 0, nums.size() - 1);
+            QuickSortSwap(nums, 0, nums.size());
             return nums;
         }
 

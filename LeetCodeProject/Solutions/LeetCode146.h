@@ -24,12 +24,12 @@ public:
 
     void put(int key, int value)
     {
-        // ĞÂµÄkey
+        // æ–°çš„key
         if (m_map.find(key) == m_map.end())
         {
             if (m_map.size() == m_maxCap)
             {
-                // ÌÔÌ­×îÀÏµÄ
+                // æ·˜æ±°æœ€è€çš„
                 m_map.erase(m_order.begin()->second);
                 m_order.pop_front();
             }
@@ -38,7 +38,7 @@ public:
             m_map[key] = --m_order.end();
             return;
         }
-        // ÖØ¸´µÄ
+        // é‡å¤çš„
         m_order.erase(m_map[key]);
         m_order.emplace_back(value, key);
         m_map[key] = --m_order.end();

@@ -78,7 +78,7 @@ namespace _3
     public:
         Solution() = default;
         ~Solution() = default;
-        // 由英文字母、数字、符号和空格组成
+        // 鐢辫嫳鏂囧瓧姣嶃�佹暟瀛椼�佺鍙峰拰绌烘牸缁勬垚
         std::vector<bool> wordBook = std::vector<bool>(128, false);
 
         bool InBook(char c)

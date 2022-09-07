@@ -76,7 +76,7 @@ namespace _43
 			return res;
 		}
 
-		// ×Ö·û´®¸ñÊ½µÄÊı×ÖÏà³Ë
+		// å­—ç¬¦ä¸²æ ¼å¼çš„æ•°å­—ç›¸ä¹˜
 		string multiply(string& num1, string& num2)
 		{
 			std::reverse(num1.begin(), num1.end());
