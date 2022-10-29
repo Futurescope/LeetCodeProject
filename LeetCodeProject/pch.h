@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <set>
+#include <list>
 #include <unordered_map>
 
 #include <math.h>
