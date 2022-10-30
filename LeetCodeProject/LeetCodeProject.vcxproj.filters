@@ -68,5 +68,11 @@
     <ClInclude Include="Solutions\LeetCode146.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\LeetCode215.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LeetCodeProject.vcxproj.user" />
   </ItemGroup>
 </Project>

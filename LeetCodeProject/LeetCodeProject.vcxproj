@@ -140,6 +140,7 @@
     <ClInclude Include="Solutions\LeetCode1706.h" />
     <ClInclude Include="Solutions\LeetCode202.h" />
     <ClInclude Include="Solutions\LeetCode205.h" />
+    <ClInclude Include="Solutions\LeetCode215.h" />
     <ClInclude Include="Solutions\LeetCode25.h" />
     <ClInclude Include="Solutions\LeetCode3.h" />
     <ClInclude Include="Solutions\LeetCode43.h" />
@@ -147,6 +148,9 @@
     <ClInclude Include="Solutions\LeetCode54.h" />
     <ClInclude Include="Solutions\LeetCode724.h" />
     <ClInclude Include="Solutions\LeetCode912.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LeetCodeProject.vcxproj.user" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
