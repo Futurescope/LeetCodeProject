@@ -137,6 +137,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Solutions\LeetCode14.h" />
     <ClInclude Include="Solutions\LeetCode146.h" />
+    <ClInclude Include="Solutions\LeetCode15.h" />
     <ClInclude Include="Solutions\LeetCode1706.h" />
     <ClInclude Include="Solutions\LeetCode202.h" />
     <ClInclude Include="Solutions\LeetCode205.h" />
