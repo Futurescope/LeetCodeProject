@@ -135,6 +135,7 @@
     <ClInclude Include="DebugUtil.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Solutions\LeetCode121.h" />
     <ClInclude Include="Solutions\LeetCode14.h" />
     <ClInclude Include="Solutions\LeetCode146.h" />
     <ClInclude Include="Solutions\LeetCode15.h" />
