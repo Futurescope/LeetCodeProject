@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -143,13 +143,14 @@
     <ClInclude Include="Solutions\LeetCode202.h" />
     <ClInclude Include="Solutions\LeetCode205.h" />
     <ClInclude Include="Solutions\LeetCode215.h" />
-    <ClInclude Include="Solutions\LeetCode25.h" />
     <ClInclude Include="Solutions\LeetCode3.h" />
     <ClInclude Include="Solutions\LeetCode43.h" />
     <ClInclude Include="Solutions\LeetCode438.h" />
+    <ClInclude Include="Solutions\LeetCode53.h" />
     <ClInclude Include="Solutions\LeetCode54.h" />
     <ClInclude Include="Solutions\LeetCode724.h" />
     <ClInclude Include="Solutions\LeetCode912.h" />
+    <ClInclude Include="Solutions\LeetCodeUnKnow.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LeetCodeProject.vcxproj.user" />
