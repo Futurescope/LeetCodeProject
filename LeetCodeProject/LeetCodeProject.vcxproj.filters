@@ -80,6 +80,9 @@
     <ClInclude Include="Solutions\LeetCodeUnKnow.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Solutions\LeetCode209.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="LeetCodeProject.vcxproj.user" />
