@@ -68,9 +68,34 @@ namespace _912
             QuickSortSwap(nums, left + 1, right_in);
         }
 
+        // TODO:二路归并
+        void MergeSort(vector<int>& nums, int left_in, int right_in)
+        {
+            std::vector<int> temp(right_in - left_in, 0);
+            if (left_in >= right_in)
+                return;
+            int mid = (left_in + right_in) / 2;
+            int i = 0;
+            int left = left_in;
+            int right = right_in / 2;
+            while (left < mid && mid < right)
+            {
+                temp[i] = std::min(nums[left], nums[mid]);
+                ++i;
+                if (nums[left] < nums[mid])
+                    ++left;
+                else
+                    ++mid;
+            }
+            while (mid <= right)
+                temp[i++] = nums[mid];
+            for (left = left_in, i = 0; left < right_in; ++left, ++i)
+                nums[left] = temp[i];
+        }
+
         vector<int> sortArray(vector<int>& nums)
         {
-            QuickSortSwap(nums, 0, nums.size());
+            MergeSort(nums, 0, nums.size());
             return nums;
         }
 

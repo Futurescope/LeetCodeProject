@@ -1,10 +1,18 @@
 #pragma once
 
 #include <iostream>
+#include <functional>
+
 #include <vector>
-#include <string>
+#include <queue>
+#include <deque>
+
 #include <set>
 #include <list>
+
+#include <string>
+
+#include <map>
 #include <unordered_map>
 
 #include <math.h>
